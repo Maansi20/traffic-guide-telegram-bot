@@ -73,3 +73,18 @@ export interface AlternativeRoute {
   distance: number;
   trafficCondition: 'light' | 'moderate' | 'heavy';
 }
+
+export interface Message {
+  id: string;
+  text: string;
+  isBot: boolean;
+  timestamp: Date;
+  type?: 'traffic' | 'route' | 'alert' | 'general';
+}
+
+export interface AdminStats {
+  activeUsers: number;
+  messagesToday: number;
+  trafficReports: number;
+  routesPlanned: number;
+}
